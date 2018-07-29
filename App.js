@@ -12,6 +12,8 @@ import {
   View, ScrollView
 } from 'react-native';
 
+import {InputWithLabel, AppButton} from './UI';
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -24,7 +26,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <Scrollview style={styles.container}>
-        <Text> React Native App! </Text>
+        <Text> React Native App </Text>
 		
 		<InputWithLabel
 			label= 'NRIC No.'
@@ -104,14 +106,14 @@ export default class App extends Component<Props> {
 		/>
 		
 		</View>
-		</ScrollView>
+	  </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  container:{
+    flex: 1
   },
  
 });
