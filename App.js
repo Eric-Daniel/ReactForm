@@ -9,7 +9,7 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View, ScrollView
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -23,17 +23,88 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
+      <Scrollview style={styles.container}>
+        <Text> React Native App! </Text>
+		
+		<InputWithLabel
+			label= 'NRIC No.'
+			orientation = "horizontal"
+			placeholder = "Your NRI No."
+			keyboardType = "numeric"
+		/>
+		
+		<InputWithLabel
+			label= 'Name'
+			orientation = "horizontal"
+			placeholder = "Your Name"
+			keyboardType = "default"
+		/>
+		
+		<InputWithLabel
+			label= 'Email'
+			orientation = "horizontal"
+			placeholder = "Your Email Address"
+			keyboardType = "email-address"
+		/>
+		
+		<InputWithLabel
+			label= 'Phone'
+			orientation = "horizontal"
+			placeholder = "Your Phone Number"
+			keyboardType = "phone-pad"
+		/>
+		
+		<InputWithLabel
+			label= 'Password'
+			orientation = "horizontal"
+			placeholder = "Your Secure Password"
+			keyboardType = "default"
+			secureTextEntry = {true}
+		/>
+		
+		<InputWithLabel
+			label= 'Address'
+			orientation = "horizontal"
+			placeholder = "Where ypu live"
+			keyboardType = "default"
+		/>
+		
+		<InputWithLabel
+			label= 'City'
+			orientation = "horizontal"
+			placeholder = "City you live"
+			keyboardType = "default"
+		/>
+		
+		<InputWithLabel
+			label= 'State'
+			orientation = "horizontal"
+			placeholder = "State or Province"
+			keyboardType = "default"
+		/>
+		
+		<InputWithLabel
+			label= 'Country'
+			orientation = "horizontal"
+			placeholder = "Country you live"
+			keyboardType = "default"
+		/>
+		
+        <View flex = {1} flexDirection = 'column>
+			<AppButton
+			flex = {1}
+			theme = 'success'
+			title = 'Sign Up'
+		/>
+		
+		<AppButton
+		flex = {1}
+		theme = 'danger'
+		title = 'Cancel'
+		/>
+		
+		</View>
+		</ScrollView>
     );
   }
 }
@@ -41,18 +112,6 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+ 
 });
