@@ -90,7 +90,7 @@ export default class App extends Component<Props> {
 			keyboardType = "default"
 		/>
 		
-        <View flex = {1} flexDirection = 'column>
+        <View flex = {1} flexDirection = 'column'>
 			<AppButton
 			flex = {1}
 			theme = 'success'
